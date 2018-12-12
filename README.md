@@ -29,7 +29,7 @@ Prior to using R programs on this repository offline, please download the main f
 ## 
 For your own data set, please use these commands after naming the data by X and Y:
 ```R
-   source("http://people.stat.sc.edu/wang528/PQD/EL_PQD_Library.R")
+   source("https://github.com/cftang9/PQD/blob/master/EL_PQD_Library.R")
    IndvsPQD(X,Y,graph=TRUE)
 ```
 ## R program for repeating the simulation study: 
