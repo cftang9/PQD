@@ -3,7 +3,7 @@
 This repository contains R programs for the article, 
 “Testing for positive quadrant dependence.,” by Dewei Wang and others. 
 This article has been submitted for publication.
-Prior to using R programs on this repository offline, please download the main function [EL_PQD_Library.R](https://github.com/cftang9/PQD/blob/master/EL_PQD_Library.R). 
+Prior to using R programs on this repository, please download the main function [EL_PQD_Library.R](https://github.com/cftang9/PQD/blob/master/EL_PQD_Library.R). 
 
 ## Three data sets:
 
@@ -29,14 +29,8 @@ Prior to using R programs on this repository offline, please download the main f
 ## 
 For your own data set, please use these commands after naming the data by X and Y:
 ```R
-
-   library(RCurl)
-   script = getURL("https://github.com/cftang9/PQD/blob/master/EL_PQD_Library.R", ssl.verifypeer = FALSE)
-   eval(parse(text = script))
-
-
-   library(devtools)
-   source_url("https://github.com/cftang9/PQD/blob/master/EL_PQD_Library.R")
+source("EL_PQD_Library.R")
+IndvsPQD(X,Y,graph=TRUE)
 ```
 ## R program for repeating the simulation study: 
 [Simulation.R](https://github.com/cftang9/PQD/blob/master/Simulation.R)
