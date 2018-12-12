@@ -4,10 +4,8 @@
 #             "Testing for positive quadrant dependence."               #
 #                         Date: 06/17/2018                              #
 #########################################################################
-
 library(Rcpp)
 library(copula)
-
 #***********************************************************************#
 # Function to produce EL-based test statistic for independence versus 
 # positive quadrant dependence. 
