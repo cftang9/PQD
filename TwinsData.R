@@ -4,10 +4,10 @@
 #             "Testing for positive quadrant dependence."               #
 #                         Date: 06/17/2018                              #
 #########################################################################
-source("http://people.stat.sc.edu/wang528/PQD/EL_PQD_Library.R")
+source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")
 ###########################################################################
 # This twins data is from Ashenfelter and Krueger (1994). 
-raw_data = read.csv("http://people.stat.sc.edu/wang528/PQD/TwinsData.csv")
+raw_data = read.csv("https://raw.githubusercontent.com/cftang9/PQD/master/TwinsData.csv")
 TwinsData = data.frame(cbind(raw_data$LHRWAGEL, raw_data$LHRWAGEH))
 TwinsData = na.omit(TwinsData); 
 colnames(TwinsData) = c("LogWage1", "LogWage2")

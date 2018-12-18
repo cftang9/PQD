@@ -4,10 +4,10 @@
 #             "Testing for positive quadrant dependence."               #
 #                         Date: 06/17/2018                              #
 #########################################################################
-source("http://people.stat.sc.edu/wang528/PQD/EL_PQD_Library.R")
+source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")
 ########################################################################
 #   This data is download from https://finance.yahoo.com/ 
-StockData = read.csv("http://people.stat.sc.edu/wang528/PQD/StockData.csv",head=TRUE)[,2:4]
+StockData = read.csv("https://raw.githubusercontent.com/cftang9/PQD/master/StockData.csv",head=TRUE)[,2:4]
 n = length(StockData$AAPL); #sample size n=124
 ##########################################################################
 # Perform Ljung–Box test to examine the independence of the returns.

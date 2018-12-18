@@ -4,8 +4,8 @@
 #             "Testing for positive quadrant dependence."               #
 #                         Date: 06/17/2018                              #
 ###########################################################################
-source("http://people.stat.sc.edu/wang528/PQD/EL_PQD_Library.R")
-EducationData = read.csv("http://people.stat.sc.edu/wang528/PQD/EducationData.csv")
+source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")
+EducationData = read.csv("https://raw.githubusercontent.com/cftang9/PQD/master/EducationData.csv")
 # sample size n=51; 
 n = length(EducationData$GraRate); 
 
