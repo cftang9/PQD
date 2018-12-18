@@ -14,7 +14,8 @@ tau = 0.2;
 X = RV_CopTau(n, tau, Copula="Clayton"); 
 IndvsPQD(X=X[,1],Y=X[,2],graph=TRUE)
 ```
-You can change the argument Copula in the function `RV_CopTau` into `Copula="Frank"` and `Copula="Gumbel"` and find all the illustration codes and results here. 
+You can change the argument `Copula="Calyton"` in the function `RV_CopTau` above into `Copula="Frank"` and `Copula="Gumbel"` and generate random sample from a Frank and Gumbel copulas, respectively.
+All the illustration codes and results are included here. 
 [IllustrativeExamples.R](https://raw.githubusercontent.com/cftang9/PQD/master/IllustrativeExamples.R)
 
 
