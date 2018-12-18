@@ -1,4 +1,4 @@
-# Testing for positive quadrant dependence.
+# Testing for positive quadrant dependence
 
 This repository contains R programs for the article, “Testing for positive quadrant dependence” 
 This article has been submitted for publication. 
@@ -22,7 +22,7 @@ All the illustration codes and results are included here.
 
 
 
-### Perform the tests for our own data
+### Perform the tests for our own data: 
 For your own data set, please use these commands after naming the data by X and Y:
 ```R
 source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")
@@ -30,7 +30,7 @@ IndvsPQD(X,Y,graph=TRUE)
 ```
 
 
-## Three data sets:
+## Data analysis:
 
 ### Educational data: 
 
@@ -47,10 +47,28 @@ IndvsPQD(X,Y,graph=TRUE)
 [StockData.csv](https://raw.githubusercontent.com/cftang9/PQD/master/StockData.csv) 
 (Codes: [StockData.R](https://raw.githubusercontent.com/cftang9/PQD/master/StockData.R) )
 
-## R program for repeating the simulation study: 
+## Size and power demonstrations: 
 [Simulation.R](https://raw.githubusercontent.com/cftang9/PQD/master/Simulation.R)
 (It might take a long time for a single computer to run 10,000 replications. We used a cluster)
 
+### Clayton, Frank, Gumbel, and Gaussian copulas: 
+For each copula, 100,000 Monte Carlo random samples with sample size
+[n=100](https://raw.githubusercontent.com/cftang9/PQD/master/Clayton%20Frank%20Gumbel%20and%20Gaussian%20n%3D100.R)
+were used to estimate the size or power. 
+The size and power results with sample sizes 
+[n=50](https://raw.githubusercontent.com/cftang9/PQD/master/Clayton%20Frank%20Gumbel%20and%20Gaussian%20n%3D50.R)
+and 
+[n=200](https://raw.githubusercontent.com/cftang9/PQD/master/Clayton%20Frank%20Gumbel%20and%20Gaussian%20n%3D200.R)
+were provided in the supplementary file. 
 
-### Reproducing the simulation results. 
+### Restricted Students' t-distribution, Farlie–Gumbel–Morgenstern (FGM), and Cuadras–Aug ́e (CA) copulas: 
+For each copula, 100,000 Monte Carlo random samples with sample size
+[n=100](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted%20t%20FGM%20and%20CA%20n%3D100.R)
+were used to estimate the size or power. 
+The size and power results with sample sizes 
+[n=50](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted%20t%20FGM%20and%20CA%20n%3D50.R)
+and
+[n=200](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted%20t%20FGM%20and%20CA%20n%3D200.R)
+were provided in the supplementary file. 
 
+(It might take a long time for a single computer to run 10,000 replications with sample sizes n=100 and n=200)
