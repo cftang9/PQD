@@ -1,6 +1,6 @@
 # Testing for positive quadrant dependence.
 
-This repository contains R programs for the article, “Testing for positive quadrant dependence.” 
+This repository contains R programs for the article, “Testing for positive quadrant dependence” 
 This article has been submitted for publication. 
 Prior to using R programs on this repository, please download the main function [EL_PQD_Library.R](https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R). 
 
