@@ -21,6 +21,15 @@ All the illustration codes and results are included here.
 [IllustrativeExamples.R](https://raw.githubusercontent.com/cftang9/PQD/master/IllustrativeExamples.R)
 
 
+
+## Perform the tests for our own data
+For your own data set, please use these commands after naming the data by X and Y:
+```R
+source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")
+IndvsPQD(X,Y,graph=TRUE)
+```
+
+
 ## Three data sets:
 
 ### Educational data: 
@@ -45,11 +54,3 @@ All the illustration codes and results are included here.
 
 ### Reproducing the simulation results. 
 
-
-
-## Perform the tests for our own data
-For your own data set, please use these commands after naming the data by X and Y:
-```R
-source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")
-IndvsPQD(X,Y,graph=TRUE)
-```
