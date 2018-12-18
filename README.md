@@ -13,7 +13,7 @@ n = 10; tau = 0.2;
 X = RV_CopTau(n, tau, Copula="Clayton"); 
 IndvsPQD(X=X[,1],Y=X[,2],graph=TRUE); 
 ```
-A scatter plot and a corresponding pseudo observation plot between `X` and `Y` and will be produce. 
+A scatter plot and a corresponding pseudo-observations plot between `X` and `Y` and will be produce. 
 The empirical-likelihood-based test EL and distance-based test KS, CvM, and AD for PQD will be perform with corresponding test statistics, critical values, and p-values. 
 
 You can change the argument `Copula="Calyton"` in the function `RV_CopTau` above into `Copula="Frank"` and `Copula="Gumbel"` and generate random sample from a Frank and Gumbel copulas, respectively.
