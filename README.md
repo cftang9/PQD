@@ -33,7 +33,7 @@ Prior to using R programs on this repository, please download the main function 
 
 #### This is a test
 
-## 
+## Perform the tests for our own data
 For your own data set, please use these commands after naming the data by X and Y:
 ```R
 source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")
