@@ -73,4 +73,3 @@ and
 [n=200](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted%20t%20FGM%20and%20CA%20n%3D200.R)
 were provided in the supplementary file. 
 
->#(It might take a long time for a single computer to run 10,000 replications with sample sizes n=100 and n=200)
