@@ -14,7 +14,7 @@ tau = 0.2;
 X = RV_CopTau(n, tau, Copula="Clayton"); 
 IndvsPQD(X=X[,1],Y=X[,2],graph=TRUE)
 ```
-You can change the argument Copula in the function ```R RV_CopTau``` into ```R Copula="Frank"``` and ```R Copula="Gumbel"``` and find all the illustration codes and results here. 
+You can change the argument Copula in the function `RV_CopTau` into `Copula="Frank"` and `Copula="Gumbel"` and find all the illustration codes and results here. 
 [IllustrativeExamples.R](https://raw.githubusercontent.com/cftang9/PQD/master/IllustrativeExamples.R)
 
 
