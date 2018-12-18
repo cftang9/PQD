@@ -48,8 +48,6 @@ IndvsPQD(X,Y,graph=TRUE)
 (Codes: [StockData.R](https://raw.githubusercontent.com/cftang9/PQD/master/StockData.R) )
 
 ## Size and power demonstrations: 
-[Simulation.R](https://raw.githubusercontent.com/cftang9/PQD/master/Simulation.R)
-(It might take a long time for a single computer to run 10,000 replications. We used a cluster)
 
 ### Clayton, Frank, Gumbel, and Gaussian copulas: 
 For each copula, 100,000 Monte Carlo random samples with sample size
