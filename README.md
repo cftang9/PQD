@@ -54,7 +54,7 @@ IndvsPQD(X,Y,graph=TRUE)
 ### Clayton, Frank, Gumbel, and Gaussian copulas: 
 For each copula, 100,000 Monte Carlo random samples with sample size
 [n=100](https://raw.githubusercontent.com/cftang9/PQD/master/Clayton%20Frank%20Gumbel%20and%20Gaussian%20n%3D100.R)
-were used to estimate the size or power. 
+were used to estimate the sizes or powers for each test. 
 The size and power results with sample sizes 
 [n=50](https://raw.githubusercontent.com/cftang9/PQD/master/Clayton%20Frank%20Gumbel%20and%20Gaussian%20n%3D50.R)
 and 
@@ -64,7 +64,7 @@ were provided in the supplementary file.
 ### Restricted Students' t-distribution, Farlie–Gumbel–Morgenstern (FGM), and Cuadras–Aug ́e (CA) copulas: 
 For each copula, 100,000 Monte Carlo random samples with sample size
 [n=100](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted%20t%20FGM%20and%20CA%20n%3D100.R)
-were used to estimate the size or power. 
+were used to estimate the sizes or powers for each test.
 The size and power results with sample sizes 
 [n=50](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted%20t%20FGM%20and%20CA%20n%3D50.R)
 and
