@@ -8,11 +8,10 @@ Prior to using R programs on this repository, please download the main function 
 
 For illustration, we generate a random sample from a Clayton copula with a user-specifiic Kandell's tau test for independence versus positive quadrant dependence. (For large sample sizes, it may take some time to generate the critical values)      
 ```R
-source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")
-n = 10; X = array(,c(n,2)); 
-tau = 0.2; 
+source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R"); 
+n = 10; tau = 0.2;
 X = RV_CopTau(n, tau, Copula="Clayton"); 
-IndvsPQD(X=X[,1],Y=X[,2],graph=TRUE)
+IndvsPQD(X=X[,1],Y=X[,2],graph=TRUE); 
 ```
 You can change the argument `Copula="Calyton"` in the function `RV_CopTau` above into `Copula="Frank"` and `Copula="Gumbel"` and generate random sample from a Frank and Gumbel copulas, respectively.
 All the illustration codes and results are included here. 
