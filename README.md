@@ -23,7 +23,7 @@ A scatter plot and a plot of the corresponding pseudo-observations between `X` a
 The empirical-likelihood-based test EL and distance-based test KS, CvM, and AD for PQD will be performed. Results include the corresponding test statistics, critical values at significance level 0.05, and p-values.
 
 You can change the argument `Copula="Calyton"` in the function `RV_CopTau` above to `Copula="Frank"` and `Copula="Gumbel"` and generate a random sample from Frank and Gumbel copulas, respectively. Other sample sizes can be considered as well. However, When the sample size is large, it may take some time to compute the critical values.
-All the illustration codes and results are included here. 
+All the illustration codes and results are included here:
 [IllustrativeExamples.R](https://raw.githubusercontent.com/cftang9/PQD/master/IllustrativeExamples.R)
 
 
