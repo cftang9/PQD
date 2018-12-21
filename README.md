@@ -10,9 +10,9 @@ Below generates a random sample of size 10 from a Clayton copula, with a user-sp
 ```R
 # Source the functions
 source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R"); 
-# Set sample size to be 10, and the Kandell's tau to be 0.2
+# Set sample size n, and the Kandell's tau
 n = 10; tau = 0.2;
-# Generate a sample of size 10
+# Generate a sample of size n
 Sample = RV_CopTau(n, tau, Copula="Clayton"); 
 # Name the sample by X and Y
 X=Sample[,1];Y=Sample[,2];
