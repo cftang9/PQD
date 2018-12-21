@@ -309,6 +309,13 @@ IndvsPQD = function(X, Y, CV=NULL, alpha=0.05, graph=FALSE){
   Tn[2:4] = Rcpp_KCA_01(cbind(X,Y), n); 
   Tn[5] = cor(X,Y,method="spearman"); 
   Tn[6] = cor(X,Y,method="kendall"); 
+  if(graph==TRUE){
+    par(mar=c(4.5,5,3,0.5))
+    par(mfrow=c(1,2))
+    plot(X, Y, main="Scatterplot of the data") 
+    plot(rank(X)/(n+1),rank(Y)/(n+1),main="Scatterplot of pseudo-observations"); 
+    par(mfrow=c(1,1))
+  }
   if(is.null(CV)){
     B = 10000; Tn0 = array(,c(B,6)); 
     for(b in 1:B){
@@ -338,13 +345,7 @@ IndvsPQD = function(X, Y, CV=NULL, alpha=0.05, graph=FALSE){
     rownames(IndvsPQD) = c("EL", "KS", "CvM", "AD", "spearman", "kendall"); 
     return(IndvsPQD)
   }
-  if(graph==TRUE){
-    par(mar=c(4.5,5,3,0.5))
-    par(mfrow=c(1,2))
-    plot(X, Y, main="Scatterplot of the data") 
-    plot(rank(X)/(n+1),rank(Y)/(n+1),main="Scatterplot of pseudo-observations"); 
-    par(mfrow=c(1,1))
-  }
+  
 }
 
 Vexler2014 = function(x,y){
