@@ -11,7 +11,8 @@ Below generates a random sample of size 10 from a Clayton copula, with a user-sp
 source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R"); 
 n = 10; tau = 0.2;
 Sample = RV_CopTau(n, tau, Copula="Clayton"); 
-IndvsPQD(X=Sample[,1],Y=Sample[,2],graph=TRUE); 
+X=Sample[,1];Y=Sample[,2];
+IndvsPQD(X,Y,graph=TRUE); 
 ```
 A scatter plot and a plot of the corresponding pseudo-observations between `X` and `Y` and will be produce. 
 The empirical-likelihood-based test EL and distance-based test KS, CvM, and AD for PQD will be performed. Results include the corresponding test statistics, critical values at significance level 0.05, and p-values.
