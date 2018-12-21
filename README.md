@@ -6,17 +6,17 @@ Prior to using R programs on this repository, please download the main function 
 
 ### Illustrative examples: 
 
-For illustration, we generate a random sample of size 10 from a Clayton copula, with a user-specified Kandell's tau, to test for independence versus positive quadrant dependence (PQD). 
+Below generates a random sample of size 10 from a Clayton copula, with a user-specified Kandell's tau, to test for independence versus positive quadrant dependence (PQD). 
 ```R
 source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R"); 
 n = 10; tau = 0.2;
-X = RV_CopTau(n, tau, Copula="Clayton"); 
-IndvsPQD(X=X[,1],Y=X[,2],graph=TRUE); 
+Sample = RV_CopTau(n, tau, Copula="Clayton"); 
+IndvsPQD(X=Sample[,1],Y=Sample[,2],graph=TRUE); 
 ```
 A scatter plot and a plot of the corresponding pseudo-observations between `X` and `Y` and will be produce. 
 The empirical-likelihood-based test EL and distance-based test KS, CvM, and AD for PQD will be performed. Results include the corresponding test statistics, critical values at significance level 0.05, and p-values.
 
-You can change the argument `Copula="Calyton"` in the function `RV_CopTau` above into `Copula="Frank"` and `Copula="Gumbel"` and generate random sample from a Frank and Gumbel copulas, respectively. Other sample sizes can be considered as well. However, When the sample size is large, it may take some time to compute the critical values.
+You can change the argument `Copula="Calyton"` in the function `RV_CopTau` above to `Copula="Frank"` and `Copula="Gumbel"` and generate a random sample from Frank and Gumbel copulas, respectively. Other sample sizes can be considered as well. However, When the sample size is large, it may take some time to compute the critical values.
 All the illustration codes and results are included here. 
 [IllustrativeExamples.R](https://raw.githubusercontent.com/cftang9/PQD/master/IllustrativeExamples.R)
 
@@ -26,6 +26,7 @@ All the illustration codes and results are included here.
 For your own data set, please use these commands after naming the data by X and Y:
 ```R
 source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")
+# name your data by X and Y
 IndvsPQD(X,Y,graph=TRUE)
 ```
 
