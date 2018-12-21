@@ -8,6 +8,7 @@ Prior to using R programs on this repository, please download the main function 
 
 Below generates a random sample of size 10 from a Clayton copula, with a user-specified Kandell's tau, to test for independence versus positive quadrant dependence (PQD). 
 ```R
+# Source the functions
 source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R"); 
 # Set sample size to be 10, and the Kandell's tau to be 0.2
 n = 10; tau = 0.2;
