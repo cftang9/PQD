@@ -338,6 +338,13 @@ IndvsPQD = function(X, Y, CV=NULL, alpha=0.05){
     rownames(IndvsPQD) = c("EL", "KS", "CvM", "AD", "spearman", "kendall"); 
     return(IndvsPQD)
   }
+  if(graph=TRUE){
+    par(mar=c(4.5,5,3,0.5))
+    par(mfrow=c(1,2))
+    plot(X, Y, main="Scatterplot of the data") 
+    plot(rank(X)/(n+1),rank(Y)/(n+1),main="Scatterplot of pseudo-observations"); 
+    par(mfrow=c(1,1))
+  }
 }
 
 Vexler2014 = function(x,y){
