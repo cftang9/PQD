@@ -302,7 +302,7 @@ IndvsPQD.CO = function(X, n, alpha=0.05, GenCV=FALSE){
   }
 }
 
-IndvsPQD = function(X, Y, CV=NULL, alpha=0.05){
+IndvsPQD = function(X, Y, CV=NULL, alpha=0.05, graph=FALSE){
   n = length(X); 
   Tn = array(,6); 
   Tn[1] = Rcpp_IP_FF(cbind(X,Y), n); 
@@ -338,7 +338,7 @@ IndvsPQD = function(X, Y, CV=NULL, alpha=0.05){
     rownames(IndvsPQD) = c("EL", "KS", "CvM", "AD", "spearman", "kendall"); 
     return(IndvsPQD)
   }
-  if(graph=TRUE){
+  if(graph==TRUE){
     par(mar=c(4.5,5,3,0.5))
     par(mfrow=c(1,2))
     plot(X, Y, main="Scatterplot of the data") 
