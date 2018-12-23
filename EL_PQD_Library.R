@@ -153,7 +153,7 @@ RV_CopTau = function(n=10,Tau=0,Copula="Frank"){
   if(Copula == "Gumbel"){
     GumbelPara = iTau(gumbelCopula(2),Tau); 
     myCop.Gumbel = archmCopula(family = "gumbel", dim = 2, param = GumbelPara)
-    X = rCopula(n, myCop.Clay)
+    X = rCopula(n, myCop.Gumbel)
   }
   return(X)
 }
