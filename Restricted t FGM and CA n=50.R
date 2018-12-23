@@ -26,7 +26,6 @@ CV = c(1.425291, 0.6719852, 0.08987011, 4.724722, 0.2342857, 0.1591837) #n=50 se
 #CV = c(1.402599, 0.6740648, 0.07325512, 3.728709, 0.1646115, 0.1119192) #n=100 set.seed(100)
 #CV = c(1.393776, 0.6801778, 0.06367364, 2.948650, 0.1178105, 0.07880402) #n=200 set.seed(200)
 
-
 set.seed(1600)
 #########################################################################
 #  Perform simulation using conditional 2D Student's t distribution on the first quadrant
@@ -100,6 +99,6 @@ for(i in 1:ndt){
 colnames(PowerCA) = dt; rownames(PowerCA) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau")
 PowerCA
 
-xtable(PowerT,digits=3)
-xtable(PowerFGM,digits=3)
-xtable(PowerCA,digits=3)
+print(PowerT,digits=3)
+print(PowerFGM,digits=3)
+print(PowerCA,digits=3)
