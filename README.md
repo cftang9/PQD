@@ -37,9 +37,9 @@ source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")
 IndvsPQD(X,Y,graph=TRUE)
 ```
 
-## Part 2: To reproduce the simulation results in Section 3 of the manuscript: 
+## Part 2: To reproduce the simulation results: 
 
-### 2.1 Clayton, Frank, Gumbel, and Gaussian copulas: 
+### 2.1 Clayton, Frank, Gumbel, and Gaussian copulas in Section 3 of the manuscript: 
 These are classic copulas. It can be shown that these copulas satisfy the PQD condition if the associated Kandell's tau or Pearson's rho is non-negative.
 For each copula, 100,000 Monte Carlo random samples with sample size
 [n=100](https://raw.githubusercontent.com/cftang9/PQD/master/Clayton%20Frank%20Gumbel%20and%20Gaussian%20n%3D100.R)
@@ -50,7 +50,7 @@ and
 [n=200](https://raw.githubusercontent.com/cftang9/PQD/master/Clayton%20Frank%20Gumbel%20and%20Gaussian%20n%3D200.R)
 were provided in the supplementary file. 
 
-### 2.2 Restricted Students' t-distribution, Farlie–Gumbel–Morgenstern (FGM), and Cuadras–Aug ́e (CA) copulas: 
+### 2.2 Restricted Students' t-distribution, Farlie–Gumbel–Morgenstern (FGM), and Cuadras–Aug ́e (CA) copulas in Web Appendix C of the supplementary file: 
 More copulas were considered in the size and power studies. 
 It can be shown that the Students' t-distribution restricted on the first quadrant and centered at the origin with identity shape matrix satisfies the PQD condition. Further, PQD also holds for some FGM and CA copulas. 
 
