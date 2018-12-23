@@ -6,7 +6,7 @@ Prior to using R programs on this repository, please download the main R program
 
 ## Part 1:  Illustration
 
-### 1.1  An example: 
+### 1.1  A simple example: 
 
 Below generates a random sample of size 10 from a Clayton copula, with a user-specified Kendall's tau, to test for independence versus positive quadrant dependence (PQD). 
 ```R
@@ -65,7 +65,7 @@ were provided in the supplementary file.
 
 
 ## Part 3: To repeat the real data analysis results in Section 4 of the manuscript:
-We applied all tests in this manuscript to three data applications. To repeat the results of our analysis, simply run the associated R program for each. The data is included in the correspdonging csv file, which will be automatically read by the R program.
+We applied all tests in this manuscript to three data applications. To repeat the results of our analysis, simply run the R program for each. The data included in the csv file will be automatically read by the corresponding R program.
 
 
 ### 3.1 Twins Data:  
