@@ -65,7 +65,7 @@ were provided in the supplementary file.
 
 
 ## Part 3: To repeat the real data analysis results in Section 4 of the manuscript:
-We applied all tests in this manuscript to three data applications. To repeat the results of our analysis, simply run the associated R program. Three data sets are included in the csv files, which will be automatically read by the corresponding R program.
+We applied all tests in this manuscript to three data applications. To repeat the results of our analysis, simply run the associated R program for each. The data is included in the correspdonging csv file, which will be automatically read by the R program.
 
 
 ### 3.1 Twins Data:  
