@@ -4,7 +4,7 @@ This repository contains R programs for the article, “Testing for positive qua
 This article has been submitted for publication. 
 Prior to using R programs on this repository, please download the main R program [EL_PQD_Library.R](https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R) or source it in R using the command: source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R"); 
 
-## 1  Illustration
+## Part 1:  Illustration
 
 ### 1.1  An example: 
 
@@ -37,7 +37,7 @@ source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")
 IndvsPQD(X,Y,graph=TRUE)
 ```
 
-## 2 To repeat the simulation results in Section 3 of the manuscript: 
+## Part 2: To repeat the simulation results in Section 3 of the manuscript: 
 
 ### 2.1 Clayton, Frank, Gumbel, and Gaussian copulas: 
 These are classic copulas. It can be shown that these copulas satisfy the PQD condition if the associated Kandell's tau or Pearson's rho is non-negative.
@@ -64,7 +64,7 @@ and
 were provided in the supplementary file. 
 
 
-## 3 To repeat the real data analysis results in Section 4 of the manuscript:
+## Part 3: To repeat the real data analysis results in Section 4 of the manuscript:
 We applied all tests in this manuscript to three data applications. To repeat the results of our analysis, simply run the associated R program. Three data sets are included in the csv files, which will be automatically read by the corresponding R program.
 
 
