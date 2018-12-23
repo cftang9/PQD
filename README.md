@@ -21,8 +21,8 @@ X=Sample[,1];Y=Sample[,2];
 # Run the test
 IndvsPQD(X,Y,graph=TRUE); 
 ```
-A scatter plot and a plot of the corresponding pseudo-observations between `X` and `Y` and will be produced. 
-The empirical-likelihood-based test EL and distance-based test KS, CvM, and AD for PQD will be performed. Results include the corresponding test statistics, critical values at significance level 0.05, and p-values.
+A scatter plot and a plot of the corresponding pseudo-observations between `X` and `Y` will be produced. 
+Our proposed empirical-likelihood-based test (EL) and three distance-based tests (KS, CvM, and AD) for PQD along with the Kendall and Spearman rank tests will be performed. Results include the corresponding test statistics, critical values at significance level 0.05, and p-values.
 
 The argument `Copula="Calyton"` in the function `RV_CopTau` above can be changed to `Copula="Frank"` and `Copula="Gumbel"` to generate a random sample from the Frank and Gumbel copulas, respectively. The gaussian copula can be considered, too. See these details in [IllustrativeExamples.R](https://raw.githubusercontent.com/cftang9/PQD/master/IllustrativeExamples.R)
 
@@ -65,7 +65,7 @@ were provided in the supplementary file.
 
 
 ## Part 3: To reproduce the real data analysis results in Section 4 of the manuscript:
-We applied all tests in this manuscript to three data applications. To reproduce the results of our analysis, simply run the R program for each. The data included in the csv file will be automatically read by the corresponding R program.
+We applied all tests in this manuscript to three data applications. To reproduce the results of our analysis (Table 2 and Figures 2-4), simply run the R program for each. The data included in the csv file will be automatically read by the corresponding R program.
 
 
 ### 3.1 Twins Data:  
