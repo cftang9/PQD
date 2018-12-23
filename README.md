@@ -37,7 +37,7 @@ source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")
 IndvsPQD(X,Y,graph=TRUE)
 ```
 
-## Part 2: To repeat the simulation results in Section 3 of the manuscript: 
+## Part 2: To reproduce the simulation results in Section 3 of the manuscript: 
 
 ### 2.1 Clayton, Frank, Gumbel, and Gaussian copulas: 
 These are classic copulas. It can be shown that these copulas satisfy the PQD condition if the associated Kandell's tau or Pearson's rho is non-negative.
@@ -64,8 +64,8 @@ and
 were provided in the supplementary file. 
 
 
-## Part 3: To repeat the real data analysis results in Section 4 of the manuscript:
-We applied all tests in this manuscript to three data applications. To repeat the results of our analysis, simply run the R program for each. The data included in the csv file will be automatically read by the corresponding R program.
+## Part 3: To reproduce the real data analysis results in Section 4 of the manuscript:
+We applied all tests in this manuscript to three data applications. To reproduce the results of our analysis, simply run the R program for each. The data included in the csv file will be automatically read by the corresponding R program.
 
 
 ### 3.1 Twins Data:  
