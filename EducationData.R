@@ -21,7 +21,7 @@ plot(rank(EducationData$GraRate)/(n+1),rank(EducationData$SpentStud)/(n+1),xlab=
 # Perform all considered tests: 
 # It takes less than 2 mins
 set.seed(100)
-IndvsPQD(EducationData$GraRate,EducationData$SpentStud)
+IndvsPQD(EducationData$GraRate,EducationData$SpentStud,graph=TRUE)
 
 # [1] "1: reject independence; 0: do not rejct independence"
 #          test_statistic p-value reject_independence critical_value
