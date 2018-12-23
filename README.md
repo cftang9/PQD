@@ -24,39 +24,18 @@ The empirical-likelihood-based test EL and distance-based test KS, CvM, and AD f
 
 The argument `Copula="Calyton"` in the function `RV_CopTau` above can be changed to `Copula="Frank"` and `Copula="Gumbel"` to generate a random sample from the Frank and Gumbel copulas, respectively. The gaussian copula can be considered, too. See these details in [IllustrativeExamples.R](https://raw.githubusercontent.com/cftang9/PQD/master/IllustrativeExamples.R)
 
-For an easy illustration, we set n=10. Other sample sizes can be considered as well. However, When the sample size is large, it will take a longer time to compute the critical values.
+For an easy illustration, we set n=10 above. Other sample sizes can be considered as well. However, When the sample size is large, it will take a longer time to compute the critical values.
 
 
-### Perform the tests for our own data: 
-For your own data set, please use these commands after naming the data by X and Y:
+### For your own data: 
+For your own data, please use these R commands after naming the data by X and Y:
 ```R
 source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")
 # name your data by X and Y
 IndvsPQD(X,Y,graph=TRUE)
 ```
 
-
-## To repeat the analysis in Section 4 of the manuscript:
-We applied all tests in this manuscript to three data applications. To repeat the results of our analysis, please use the following R programs. The three data are presented in the csv files.
-
-
-### Twins Data:  
-
-[TwinsData.csv](https://raw.githubusercontent.com/cftang9/PQD/master/TwinsData.csv) 
-(R program: [TwinsData.R](https://raw.githubusercontent.com/cftang9/PQD/master/TwinsData.R) )
-
-### Educational data: 
-
-[EducationData.csv](https://raw.githubusercontent.com/cftang9/PQD/master/EducationData.csv)
-(R program: [EducationData.R](https://raw.githubusercontent.com/cftang9/PQD/master/EducationData.R) )
-
-
-### Stocks Data: 
-
-[StockData.csv](https://raw.githubusercontent.com/cftang9/PQD/master/StockData.csv) 
-(R program: [StockData.R](https://raw.githubusercontent.com/cftang9/PQD/master/StockData.R) )
-
-## Size and power demonstrations: 
+## To repeat the simulation results in Section 3 of the manuscript: 
 
 ### Clayton, Frank, Gumbel, and Gaussian copulas: 
 These are classic copulas. It can be shown that these copulas satisfy the PQD condition if the associated Kandell's tau or Pearson's rho is non-negative.
@@ -81,4 +60,27 @@ The size and power results with sample sizes
 and
 [n=200](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted%20t%20FGM%20and%20CA%20n%3D200.R)
 were provided in the supplementary file. 
+
+
+## To repeat the real data analysis results in Section 4 of the manuscript:
+We applied all tests in this manuscript to three data applications. To repeat the results of our analysis, please use the following R programs. The three data are presented in the csv files.
+
+
+### Twins Data:  
+
+[TwinsData.csv](https://raw.githubusercontent.com/cftang9/PQD/master/TwinsData.csv) 
+(R program: [TwinsData.R](https://raw.githubusercontent.com/cftang9/PQD/master/TwinsData.R) )
+
+### Educational data: 
+
+[EducationData.csv](https://raw.githubusercontent.com/cftang9/PQD/master/EducationData.csv)
+(R program: [EducationData.R](https://raw.githubusercontent.com/cftang9/PQD/master/EducationData.R) )
+
+
+### Stocks Data: 
+
+[StockData.csv](https://raw.githubusercontent.com/cftang9/PQD/master/StockData.csv) 
+(R program: [StockData.R](https://raw.githubusercontent.com/cftang9/PQD/master/StockData.R) )
+
+
 
