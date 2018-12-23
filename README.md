@@ -11,15 +11,15 @@ Prior to using R programs on this repository, please download the main R program
 Below generates a random sample of size 10 from a Clayton copula, with a user-specified Kendall's tau, to test for independence versus positive quadrant dependence (PQD). 
 ```R
 # Source the main R program
-source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R"); 
+source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")
 # Set sample size n, and the Kendall's tau
-n = 10; tau = 0.2;
+n = 10; tau = 0.2
 # Generate a sample of size n
-Sample = RV_CopTau(n, tau, Copula="Clayton"); 
+Sample = RV_CopTau(n, tau, Copula="Clayton")
 # Name the sample by X and Y
-X=Sample[,1];Y=Sample[,2];
+X=Sample[,1];Y=Sample[,2]
 # Run the test
-IndvsPQD(X,Y,graph=TRUE); 
+IndvsPQD(X,Y,graph=TRUE)
 ```
 A scatter plot and a plot of the corresponding pseudo-observations between `X` and `Y` will be produced. 
 Our proposed empirical-likelihood-based test (EL) and three distance-based tests (KS, CvM, and AD) for PQD along with the Kendall and Spearman rank tests will be performed. Results include the corresponding test statistics, critical values at significance level 0.05, and p-values.
