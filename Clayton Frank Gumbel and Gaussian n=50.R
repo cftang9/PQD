@@ -7,17 +7,18 @@
 library(Rcpp)
 library(copula)
 source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")
-Sys.time()
+
 #########################################################################
 #  Generating critical values for EL, KS, CvM, AD, Spearman, and Kendall
 #  tests for independence versus PQD from uniform (0,1)^2 with sample 
 #  size n and 10000 Monte Carlo replications. 
 #  (It may take some time to generate critical for large sample sizes, 
 #   for example, 100.)
-set.seed(50)
-n = 50; #sample size; 
+
+n = 50; #sample size
 alpha = 0.05; #significance level 
-CV = array(0,6); TestStats = array(,c(10000,6)); 
+CV = array(0,6); TestStats = array(,c(10000,6)); #Creating a CV
+set.seed(50) #fix a seed. 
 for(b in 1:10000){
   X0 = array(runif(2*n),c(n,2)); 
   TestStats[b,1] = Rcpp_IP_FF(X0,n); 
@@ -28,7 +29,6 @@ for(b in 1:10000){
 CV = apply(TestStats,2,quantile,prob=0.95)
 CV = data.frame(t(CV))
 colnames(CV) = c("EL","KS","CvM","AD","spearman","kendall")
-Sys.time()
 #########################################################################
 #  Perform simulation using Clayton copula 
 #  with sample size n and B Monte Carlo replications. 
@@ -51,8 +51,7 @@ for(i in 1:nTau){
   }
 }
 colnames(Power) = Tau; rownames(Power) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau")
-Power
-Sys.time()
+Power_Calyton = Power; 
 #########################################################################
 #  Perform simulation using Frank copula 
 #  with sample size n and B Monte Carlo replications. 
@@ -74,12 +73,12 @@ for(i in 1:nTau){
   }
 }
 colnames(Power) = Tau; rownames(Power) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau")
-Power
-Sys.time()
+Power_Frank = Power; 
+
 #########################################################################
 #  Perform simulation using Gumbel copula 
 #  with sample size n and B Monte Carlo replications. 
-B = 10000; #number of Monte Carlo replications
+B = 10000; #nu;mber of Monte Carlo replications
 Tau = seq(0,0.4,by=0.1); nTau = length(Tau); 
 Power = array(0,c(6,nTau)); 
 set.seed(400)
@@ -96,9 +95,9 @@ for(i in 1:nTau){
     Power[6,i] = c(cor(X,method="kendall")[2]>CV[6])/B + Power[6,i]
   }
 }
-colnames(Power) = Tau; rownames(Power) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau")
-Power
-Sys.time()
+colnames(Power) = Tau; rownames(Power) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau"); 
+Power_Gumbel = Power; 
+
 #########################################################################
 #  Perform simulation using Gaussian copula 
 #  with sample size n and B Monte Carlo replications. 
@@ -119,6 +118,11 @@ for(i in 1:nRho){
     Power[6,i] = c(cor(X,method="kendall")[2]>CV[6])/B + Power[6,i]
   }
 }
-colnames(Power) = Tau; rownames(Power) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau")
-Power
-Sys.time()
+colnames(Power) = Tau; rownames(Power) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau"); 
+Power_Gaussian = Power; 
+
+print(Power_Calyton,digit=3); 
+print(Power_Frank,digit=3);
+print(Power_Gumbel,digit=3);
+print(Power_Gaussian,digit=3);
+
