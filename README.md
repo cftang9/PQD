@@ -4,9 +4,9 @@ This repository contains R programs for the article, “Testing for positive qua
 This article has been submitted for publication. 
 Prior to using R programs on this repository, please download the main R program [EL_PQD_Library.R](https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R) or source it in R using the command: source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R"); 
 
-## 1 Illustration
+## 1  Illustration
 
-### 1.1 An example: 
+### 1.1  An example: 
 
 Below generates a random sample of size 10 from a Clayton copula, with a user-specified Kendall's tau, to test for independence versus positive quadrant dependence (PQD). 
 ```R
