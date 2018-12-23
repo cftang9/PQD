@@ -73,13 +73,13 @@ We applied all tests in this manuscript to three data applications. To repeat th
 [TwinsData.csv](https://raw.githubusercontent.com/cftang9/PQD/master/TwinsData.csv) 
 (R program: [TwinsData.R](https://raw.githubusercontent.com/cftang9/PQD/master/TwinsData.R) )
 
-### 3.2 Educational data: 
+### 3.2 Education data: 
 
 [EducationData.csv](https://raw.githubusercontent.com/cftang9/PQD/master/EducationData.csv)
 (R program: [EducationData.R](https://raw.githubusercontent.com/cftang9/PQD/master/EducationData.R) )
 
 
-### 3.3 Stocks Data: 
+### 3.3 Stock Data: 
 
 [StockData.csv](https://raw.githubusercontent.com/cftang9/PQD/master/StockData.csv) 
 (R program: [StockData.R](https://raw.githubusercontent.com/cftang9/PQD/master/StockData.R) )
