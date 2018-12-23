@@ -67,18 +67,18 @@ We applied all tests in this manuscript to three data applications. To reproduce
 ### 3.1 Twins Data:  
 
 Data: [TwinsData.csv](https://raw.githubusercontent.com/cftang9/PQD/master/TwinsData.csv) 
-(R program: [TwinsData.R](https://raw.githubusercontent.com/cftang9/PQD/master/TwinsData.R) )
+(R program: [TwinsData.R](https://raw.githubusercontent.com/cftang9/PQD/master/TwinsData.R))
 
 ### 3.2 Education data: 
 
 Data: [EducationData.csv](https://raw.githubusercontent.com/cftang9/PQD/master/EducationData.csv)
-(R program: [EducationData.R](https://raw.githubusercontent.com/cftang9/PQD/master/EducationData.R) )
+(R program: [EducationData.R](https://raw.githubusercontent.com/cftang9/PQD/master/EducationData.R))
 
 
 ### 3.3 Stock Data: 
 
 Data: [StockData.csv](https://raw.githubusercontent.com/cftang9/PQD/master/StockData.csv) 
-(R program: [StockData.R](https://raw.githubusercontent.com/cftang9/PQD/master/StockData.R) )
+(R program: [StockData.R](https://raw.githubusercontent.com/cftang9/PQD/master/StockData.R))
 
 
 
