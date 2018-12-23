@@ -32,7 +32,7 @@ colnames(CV) = c("EL","KS","CvM","AD","spearman","kendall")
 #########################################################################
 #  Perform simulation using Clayton copula 
 #  with sample size n and B Monte Carlo replications. 
-B = 10; #number of Monte Carlo replications
+B = 10000; #number of Monte Carlo replications
 Tau = seq(0,0.4,by=0.1); nTau = length(Tau); 
 Power = array(0,c(6,nTau)); 
 #set.seed(200) # for n not equals to 200
@@ -56,7 +56,7 @@ Power_Calyton = Power
 #########################################################################
 #  Perform simulation using Frank copula 
 #  with sample size n and B Monte Carlo replications. 
-B = 10; #number of Monte Carlo replications
+B = 10000; #number of Monte Carlo replications
 Tau = seq(0,0.4,by=0.1); nTau = length(Tau); 
 Power = array(0,c(6,nTau)); 
 set.seed(300)
@@ -79,7 +79,7 @@ Power_Frank = Power
 #########################################################################
 #  Perform simulation using Gumbel copula 
 #  with sample size n and B Monte Carlo replications. 
-B = 10; #number of Monte Carlo replications
+B = 10000; #number of Monte Carlo replications
 Tau = seq(0,0.4,by=0.1); nTau = length(Tau); 
 Power = array(0,c(6,nTau)); 
 set.seed(400)
@@ -102,7 +102,7 @@ Power_Gumbel = Power
 #########################################################################
 #  Perform simulation using Gaussian copula 
 #  with sample size n and B Monte Carlo replications. 
-B = 10; #number of Monte Carlo replications
+B = 10000; #number of Monte Carlo replications
 Rho = seq(0,0.4,by=0.1); nRho = length(Rho); 
 Power = array(0,c(6,nRho)); 
 set.seed(500)
@@ -121,8 +121,6 @@ for(i in 1:nRho){
 }
 colnames(Power) = Tau; rownames(Power) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau")
 Power_Gaussian = Power
-
-
 
 
 print(Power_Calyton,digit=3); 
