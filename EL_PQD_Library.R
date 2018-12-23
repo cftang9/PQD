@@ -149,7 +149,12 @@ RV_CopTau = function(n=10,Tau=0,Copula="Frank"){
     ClayPara = iTau(claytonCopula(2),Tau); 
     myCop.Clay = archmCopula(family = "clayton", dim = 2, param = ClayPara)
     X = rCopula(n, myCop.Clay)
-  }  
+  }
+  if(Copula == "Gumbel"){
+    GumbelPara = iTau(gumbelCopula(2),Tau); 
+    myCop.Gumbel = archmCopula(family = "gumbel", dim = 2, param = GumbelPara)
+    X = rCopula(n, myCop.Clay)
+  }
   return(X)
 }
 
