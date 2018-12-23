@@ -44,7 +44,7 @@ To reproduce Table 1, which involves four classic copulas: Clayton, Frank, Gumbe
 [Clayton Frank Gumbel and Gaussian n=100.R](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted%20t%20FGM%20and%20CA%20n%3D100.R).
 But be aware of that, because the number of replications is 10,000, this program might take a long time to finish. As stated in our manuscript, our calcuation of Table 1 took approximately 73 minutes on a computer with a 3.1GHz processor and 16GB of memory. 
 
-Table 1 considers n=100. We also included the same table but with n=50 and 200 in the supplementary materials. To reproduce those two tables. Please run [Clayton Frank Gumbel and Gaussian n=50.R](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted%20t%20FGM%20and%20CA%20n%3D50.R)
+Table 1 considers n=100. We also included the same table but with n=50 and 200 in the supplementary file. To reproduce those two tables. Please run [Clayton Frank Gumbel and Gaussian n=50.R](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted%20t%20FGM%20and%20CA%20n%3D50.R)
 and
 [Clayton Frank Gumbel and Gaussian n=200.R](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted%20t%20FGM%20and%20CA%20n%3D200.R), respectively.
 
