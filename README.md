@@ -12,7 +12,7 @@ Below generates a random sample of size 10 from a Clayton copula, with a user-sp
 ```R
 # Source the main R program
 source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R"); 
-# Set sample size n, and the Kandell's tau
+# Set sample size n, and the Kendall's tau
 n = 10; tau = 0.2;
 # Generate a sample of size n
 Sample = RV_CopTau(n, tau, Copula="Clayton"); 
@@ -26,11 +26,11 @@ The empirical-likelihood-based test EL and distance-based test KS, CvM, and AD f
 
 The argument `Copula="Calyton"` in the function `RV_CopTau` above can be changed to `Copula="Frank"` and `Copula="Gumbel"` to generate a random sample from the Frank and Gumbel copulas, respectively. The gaussian copula can be considered, too. See these details in [IllustrativeExamples.R](https://raw.githubusercontent.com/cftang9/PQD/master/IllustrativeExamples.R)
 
-For an easy illustration, we set n=10 above. Other sample sizes can be considered as well. However, When the sample size is large, it will take a longer time to compute the critical values.
+For an easy illustration, we set n=10 above. Other sample sizes can be considered as well. However, When the sample size is large, it will take a longer time to run.
 
 
 ### 1.2 For your own data: 
-For your own data, please use these R commands after naming the data by X and Y:
+Please use these R commands after naming the data by X and Y:
 ```R
 source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")
 # name your data by X and Y
