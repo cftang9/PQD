@@ -4,7 +4,9 @@ This repository contains R programs for the article, “Testing for positive qua
 This article has been submitted for publication. 
 Prior to using R programs on this repository, please download the main R program [EL_PQD_Library.R](https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R) or source it in R using the command: source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R"); 
 
-### An illustrative example: 
+## 1 Illustration
+
+### 1.1 An example: 
 
 Below generates a random sample of size 10 from a Clayton copula, with a user-specified Kendall's tau, to test for independence versus positive quadrant dependence (PQD). 
 ```R
@@ -27,7 +29,7 @@ The argument `Copula="Calyton"` in the function `RV_CopTau` above can be changed
 For an easy illustration, we set n=10 above. Other sample sizes can be considered as well. However, When the sample size is large, it will take a longer time to compute the critical values.
 
 
-### For your own data: 
+### 1.2 For your own data: 
 For your own data, please use these R commands after naming the data by X and Y:
 ```R
 source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")
@@ -35,9 +37,9 @@ source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")
 IndvsPQD(X,Y,graph=TRUE)
 ```
 
-## To repeat the simulation results in Section 3 of the manuscript: 
+## 2 To repeat the simulation results in Section 3 of the manuscript: 
 
-### Clayton, Frank, Gumbel, and Gaussian copulas: 
+### 2.1 Clayton, Frank, Gumbel, and Gaussian copulas: 
 These are classic copulas. It can be shown that these copulas satisfy the PQD condition if the associated Kandell's tau or Pearson's rho is non-negative.
 For each copula, 100,000 Monte Carlo random samples with sample size
 [n=100](https://raw.githubusercontent.com/cftang9/PQD/master/Clayton%20Frank%20Gumbel%20and%20Gaussian%20n%3D100.R)
@@ -48,7 +50,7 @@ and
 [n=200](https://raw.githubusercontent.com/cftang9/PQD/master/Clayton%20Frank%20Gumbel%20and%20Gaussian%20n%3D200.R)
 were provided in the supplementary file. 
 
-### Restricted Students' t-distribution, Farlie–Gumbel–Morgenstern (FGM), and Cuadras–Aug ́e (CA) copulas: 
+### 2.2 Restricted Students' t-distribution, Farlie–Gumbel–Morgenstern (FGM), and Cuadras–Aug ́e (CA) copulas: 
 More copulas were considered in the size and power studies. 
 It can be shown that the Students' t-distribution restricted on the first quadrant and centered at the origin with identity shape matrix satisfies the PQD condition. Further, PQD also holds for some FGM and CA copulas. 
 
@@ -62,22 +64,22 @@ and
 were provided in the supplementary file. 
 
 
-## To repeat the real data analysis results in Section 4 of the manuscript:
-We applied all tests in this manuscript to three data applications. To repeat the results of our analysis, please use the following R programs. The three data are presented in the csv files.
+## 3 To repeat the real data analysis results in Section 4 of the manuscript:
+We applied all tests in this manuscript to three data applications. To repeat the results of our analysis, simply run the associated R program. Three data sets are included in the csv files, which will be automatically read by the corresponding R program.
 
 
-### Twins Data:  
+### 3.1 Twins Data:  
 
 [TwinsData.csv](https://raw.githubusercontent.com/cftang9/PQD/master/TwinsData.csv) 
 (R program: [TwinsData.R](https://raw.githubusercontent.com/cftang9/PQD/master/TwinsData.R) )
 
-### Educational data: 
+### 3.2 Educational data: 
 
 [EducationData.csv](https://raw.githubusercontent.com/cftang9/PQD/master/EducationData.csv)
 (R program: [EducationData.R](https://raw.githubusercontent.com/cftang9/PQD/master/EducationData.R) )
 
 
-### Stocks Data: 
+### 3.3 Stocks Data: 
 
 [StockData.csv](https://raw.githubusercontent.com/cftang9/PQD/master/StockData.csv) 
 (R program: [StockData.R](https://raw.githubusercontent.com/cftang9/PQD/master/StockData.R) )
