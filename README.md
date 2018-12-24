@@ -41,24 +41,24 @@ IndvsPQD(X,Y,graph=TRUE)
 
 ### 2.1 Table 1 in Section 3 of the manuscript 
 To reproduce Table 1, which involves four classic copulas: Clayton, Frank, Gumbel, and Gaussian, please run this R program:
-[Clayton Frank Gumbel and Gaussian n=100.R](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted%20t%20FGM%20and%20CA%20n%3D100.R).
+[Clayton_Frank_Gumbel_and_Gaussian_n=100.R](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted_t_FGM_and_CA_n%3D100.R).
 But be aware of that, because the number of replications is 10,000, this program might take a long time to finish. As stated in our manuscript, our calcuation of Table 1 took approximately 73 minutes on a computer with a 3.1GHz processor and 16GB of memory. 
 
-Table 1 considers n=100. We also included the same table but with n=50 and 200 in the supplementary file. To reproduce those two tables. Please run [Clayton Frank Gumbel and Gaussian n=50.R](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted%20t%20FGM%20and%20CA%20n%3D50.R)
+Table 1 considers n=100. We also included the same table but with n=50 and 200 in the supplementary file. To reproduce those two tables. Please run [Clayton Frank Gumbel and Gaussian n=50.R](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted_t_FGM_and_CA_n%3D50.R)
 and
-[Clayton Frank Gumbel and Gaussian n=200.R](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted%20t%20FGM%20and%20CA%20n%3D200.R), respectively.
+[Clayton Frank Gumbel and Gaussian n=200.R](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted_t_FGM_and_CA_n%3D200.R), respectively.
 
 ### 2.2 Restricted Students' t-distribution, Farlie–Gumbel–Morgenstern (FGM), and Cuadras–Aug ́e (CA) copulas in Web Appendix C of the supplementary file
 More copulas were considered in the size and power studies. 
 It can be shown that the Students' t-distribution restricted on the first quadrant and centered at the origin with identity shape matrix satisfies the PQD condition. Further, PQD also holds for some FGM and CA copulas. 
 
 For each of these copulas, 100,000 Monte Carlo random samples with sample size
-[Restricted t FGM and CA n=50.R](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted%20t%20FGM%20and%20CA%20n%3D100.R)
+[Restricted t FGM and CA n=50.R](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted_t_FGM_and_CA_n%3D100.R)
 were used to estimate the sizes or powers for each test.
 The size and power results with sample sizes 
-[Restricted t FGM and CA n=100.R](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted%20t%20FGM%20and%20CA%20n%3D50.R)
+[Restricted t FGM and CA n=100.R](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted_t_FGM_and_CA_n%3D50.R)
 and
-[Restricted t FGM and CA n=200.R](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted%20t%20FGM%20and%20CA%20n%3D200.R).
+[Restricted t FGM and CA n=200.R](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted_t_FGM_and_CA_n%3D200.R).
 
 ## Part 3: To reproduce the real data analysis results in Section 4 of the manuscript
 We applied all tests in this manuscript to three data applications. To reproduce the results of our analysis (Table 2 and Figures 2-4), please run the R program for each. The data included in the csv file will be automatically read by the corresponding R program.
