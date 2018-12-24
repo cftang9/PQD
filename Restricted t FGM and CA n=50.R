@@ -26,13 +26,14 @@ CV = c(1.425291, 0.6719852, 0.08987011, 4.724722, 0.2342857, 0.1591837) #n=50 se
 #CV = c(1.402599, 0.6740648, 0.07325512, 3.728709, 0.1646115, 0.1119192) #n=100 set.seed(100)
 #CV = c(1.393776, 0.6801778, 0.06367364, 2.948650, 0.1178105, 0.07880402) #n=200 set.seed(200)
 
-set.seed(1600)
+
 #########################################################################
 #  Perform simulation using conditional 2D Student's t distribution on the first quadrant
 #  with sample size n and B Monte Carlo replications. 
 B = 10000#number of Monte Carlo replications
 dt = c(1,2,3,4,5,10,50,100); ndt = length(dt); 
 PowerT = array(0,c(6,ndt)); 
+set.seed(1600)
 for(i in 1:ndt){
   myCop.t = tCopula(0,dim=2,df=dt[i]); 
   for(b in 1:B){
@@ -44,19 +45,19 @@ for(i in 1:ndt){
     PowerT[4,i] = c(temp[3]>CV[4])/B + PowerT[4,i]; 
     PowerT[5,i] = c(cor(X,method="spearman")[2]>CV[5])/B + PowerT[5,i]
     PowerT[6,i] = c(cor(X,method="kendall")[2]>CV[6])/B + PowerT[6,i]
-    #PowerT[7,i] = c(Vexler2014(X[,1], X[,2]) > CV_Vexler2014(n))/B + PowerT[7,i]
   }
 }
 colnames(PowerT) = dt; rownames(PowerT) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau")
 PowerT
 
-set.seed(1700)
+
 #########################################################################
 #  Perform simulation using conditional 2D FGM copula on the first quadrant
 #  with sample size n and B Monte Carlo replications. 
 B = 10000#number of Monte Carlo replications
 dt = seq(0,1,by=0.2); ndt = length(dt); 
 PowerFGM = array(0,c(6,ndt)); 
+set.seed(1700)
 for(i in 1:ndt){
   fgm.cop <- fgmCopula(param=dt[i],dim=2)
   for(b in 1:B){
@@ -68,19 +69,19 @@ for(i in 1:ndt){
     PowerFGM[4,i] = c(temp[3]>CV[4])/B + PowerFGM[4,i]; 
     PowerFGM[5,i] = c(cor(X,method="spearman")[2]>CV[5])/B + PowerFGM[5,i]
     PowerFGM[6,i] = c(cor(X,method="kendall")[2]>CV[6])/B + PowerFGM[6,i]
-    #PowerFGM[7,i] = c(Vexler2014(X[,1], X[,2]) > CV_Vexler2014(n))/B + PowerFGM[7,i]
   }
 }
 colnames(PowerFGM) = dt; rownames(PowerFGM) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau")
 PowerFGM
 
-set.seed(1800)
+
 #########################################################################
 #  Perform simulation using Cuadras-Aug'e copula distribution on the first quadrant
 #  with sample size n and B Monte Carlo replications. 
 B = 10000#number of Monte Carlo replications
 dt = seq(0,1,by=0.2); ndt = length(dt); 
 PowerCA = array(0,c(6,ndt)); 
+set.seed(1800)
 for(i in 1:ndt){
   theta = c(dt[i], dt[i])
   myFDGcopula <- FDGcopula("cuadrasauge", theta)
@@ -93,7 +94,6 @@ for(i in 1:ndt){
     PowerCA[4,i] = c(temp[3]>CV[4])/B + PowerCA[4,i]; 
     PowerCA[5,i] = c(cor(X,method="spearman")[2]>CV[5])/B + PowerCA[5,i]
     PowerCA[6,i] = c(cor(X,method="kendall")[2]>CV[6])/B + PowerCA[6,i]
-    #PowerCA[7,i] = c(Vexler2014(X[,1], X[,2]) > CV_Vexler2014(n))/B + PowerCA[7,i]
   }
 }
 colnames(PowerCA) = dt; rownames(PowerCA) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau")
