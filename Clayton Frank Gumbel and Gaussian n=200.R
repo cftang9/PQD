@@ -35,8 +35,7 @@ Sys.time()
 B = 10000; #number of Monte Carlo replications
 Tau = seq(0,0.4,by=0.1); nTau = length(Tau); 
 Power = array(0,c(6,nTau)); 
-#set.seed(200) # for n not equals to 200
-set.seed(1200) # for n=200
+set.seed(1200) 
 for(i in 1:nTau){
   for(b in 1:B){
     if(Tau[i]==0){X = array(runif(2*n),c(n,2)); }
