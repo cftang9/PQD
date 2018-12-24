@@ -30,7 +30,7 @@ CV = c(1.425291, 0.6719852, 0.08987011, 4.724722, 0.2342857, 0.1591837) #n=50 se
 #########################################################################
 #  Perform simulation using conditional 2D Student's t distribution on the first quadrant
 #  with sample size n and B Monte Carlo replications. 
-B = 10000#number of Monte Carlo replications
+B = 10000; #number of Monte Carlo replications
 dt = c(1,2,3,4,5,10,50,100); ndt = length(dt); 
 PowerT = array(0,c(6,ndt)); 
 set.seed(1600)
@@ -48,13 +48,11 @@ for(i in 1:ndt){
   }
 }
 colnames(PowerT) = dt; rownames(PowerT) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau")
-PowerT
-
 
 #########################################################################
 #  Perform simulation using conditional 2D FGM copula on the first quadrant
 #  with sample size n and B Monte Carlo replications. 
-B = 10000#number of Monte Carlo replications
+B = 10000; #number of Monte Carlo replications
 dt = seq(0,1,by=0.2); ndt = length(dt); 
 PowerFGM = array(0,c(6,ndt)); 
 set.seed(1700)
@@ -72,13 +70,11 @@ for(i in 1:ndt){
   }
 }
 colnames(PowerFGM) = dt; rownames(PowerFGM) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau")
-PowerFGM
-
 
 #########################################################################
 #  Perform simulation using Cuadras-Aug'e copula distribution on the first quadrant
 #  with sample size n and B Monte Carlo replications. 
-B = 10000#number of Monte Carlo replications
+B = 10000; #number of Monte Carlo replications
 dt = seq(0,1,by=0.2); ndt = length(dt); 
 PowerCA = array(0,c(6,ndt)); 
 set.seed(1800)
@@ -97,7 +93,6 @@ for(i in 1:ndt){
   }
 }
 colnames(PowerCA) = dt; rownames(PowerCA) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau")
-PowerCA
 
 print(PowerT,digits=3)
 print(PowerFGM,digits=3)
