@@ -123,7 +123,7 @@ for(i in 1:nRho){
 colnames(Power) = Tau; rownames(Power) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau"); 
 Power_Gaussian = Power; 
 
-print(Power_Calyton,digit=3); 
-print(Power_Frank,digit=3);
-print(Power_Gumbel,digit=3);
-print(Power_Gaussian,digit=3);
+print("Clayton"); print(Power_Calyton,digit=3); 
+print("Frank"); print(Power_Frank,digit=3);
+print("Gumbel"); print(Power_Gumbel,digit=3);
+print("Gaussian"); print(Power_Gaussian,digit=3);
