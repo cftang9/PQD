@@ -28,7 +28,7 @@ for(b in 1:10000){
 CV = apply(TestStats,2,quantile,prob=0.95)
 CV = data.frame(t(CV))
 colnames(CV) = c("EL","KS","CvM","AD","spearman","kendall")
-Sys.time()
+
 #########################################################################
 #  Perform simulation using Clayton copula 
 #  with sample size n and B Monte Carlo replications. 
@@ -50,8 +50,8 @@ for(i in 1:nTau){
   }
 }
 colnames(Power) = Tau; rownames(Power) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau")
-Power
-Sys.time()
+Power_Clayton = Power; 
+
 #########################################################################
 #  Perform simulation using Frank copula 
 #  with sample size n and B Monte Carlo replications. 
@@ -73,8 +73,8 @@ for(i in 1:nTau){
   }
 }
 colnames(Power) = Tau; rownames(Power) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau")
-Power
-Sys.time()
+Power_Frank = Power
+
 #########################################################################
 #  Perform simulation using Gumbel copula 
 #  with sample size n and B Monte Carlo replications. 
@@ -96,8 +96,8 @@ for(i in 1:nTau){
   }
 }
 colnames(Power) = Tau; rownames(Power) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau")
-Power
-Sys.time()
+Power_Gumbel = Power; 
+
 #########################################################################
 #  Perform simulation using Gaussian copula 
 #  with sample size n and B Monte Carlo replications. 
@@ -119,5 +119,9 @@ for(i in 1:nRho){
   }
 }
 colnames(Power) = Tau; rownames(Power) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau")
-Power
-Sys.time()
+Power_Gaussian = Power; 
+
+print("Clayton"); print(Power_Clayton,digit=3); 
+print("Frank"); print(Power_Frank,digit=3);
+print("Gumbel"); print(Power_Gumbel,digit=3);
+print("Gaussian"); print(Power_Gaussian,digit=3);
