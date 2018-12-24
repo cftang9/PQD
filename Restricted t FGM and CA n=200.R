@@ -27,13 +27,14 @@ alpha = 0.05; #significance level
 CV = c(1.393776, 0.6801778, 0.06367364, 2.948650, 0.1178105, 0.07880402) #n=200 set.seed(200)
 
 
-set.seed(1600)
+
 #########################################################################
 #  Perform simulation using conditional 2D Student's t distribution on the first quadrant
 #  with sample size n and B Monte Carlo replications. 
 B = 10000#number of Monte Carlo replications
 dt = c(1,2,3,4,5,10,50,100); ndt = length(dt); 
 PowerT = array(0,c(6,ndt)); 
+set.seed(1600)
 for(i in 1:ndt){
   myCop.t = tCopula(0,dim=2,df=dt[i]); 
   for(b in 1:B){
@@ -51,13 +52,14 @@ for(i in 1:ndt){
 colnames(PowerT) = dt; rownames(PowerT) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau")
 PowerT
 
-set.seed(1700)
+
 #########################################################################
 #  Perform simulation using conditional 2D FGM copula on the first quadrant
 #  with sample size n and B Monte Carlo replications. 
 B = 10000#number of Monte Carlo replications
 dt = seq(0,1,by=0.2); ndt = length(dt); 
 PowerFGM = array(0,c(6,ndt)); 
+set.seed(1700)
 for(i in 1:ndt){
   fgm.cop <- fgmCopula(param=dt[i],dim=2)
   for(b in 1:B){
@@ -75,13 +77,14 @@ for(i in 1:ndt){
 colnames(PowerFGM) = dt; rownames(PowerFGM) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau")
 PowerFGM
 
-set.seed(1800)
+
 #########################################################################
 #  Perform simulation using Cuadras-Aug'e copula distribution on the first quadrant
 #  with sample size n and B Monte Carlo replications. 
 B = 10000#number of Monte Carlo replications
 dt = seq(0,1,by=0.2); ndt = length(dt); 
 PowerCA = array(0,c(6,ndt)); 
+set.seed(1800)
 for(i in 1:ndt){
   theta = c(dt[i], dt[i])
   myFDGcopula <- FDGcopula("cuadrasauge", theta)
@@ -100,6 +103,6 @@ for(i in 1:ndt){
 colnames(PowerCA) = dt; rownames(PowerCA) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau")
 PowerCA
 
-xtable(PowerT,digits=3)
-xtable(PowerFGM,digits=3)
-xtable(PowerCA,digits=3)
+print(PowerT,digits=3)
+print(PowerFGM,digits=3)
+print(PowerCA,digits=3)
