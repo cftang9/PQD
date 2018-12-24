@@ -15,28 +15,29 @@ source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")
 #  (It may take some time to generate critical for large sample sizes, 
 #   for example, 100.)
 
-n = 50; #sample size
-alpha = 0.05; #significance level 
-CV = array(0,6); TestStats = array(,c(10000,6)); #Creating a CV
-set.seed(50) #fix a seed. 
-for(b in 1:10000){
+n = 50; # sample size
+alpha = 0.05; # significance level 
+CV = array(0,6); TestStats = array(,c(10000,6)); 
+set.seed(50) # fix a seed. 
+for(b in 1:10000){ 
   X0 = array(runif(2*n),c(n,2)); 
   TestStats[b,1] = Rcpp_IP_FF(X0,n); 
   TestStats[b,2:4] = Rcpp_KCA_01(X0,n);  
   TestStats[b,5] = cor(X0,method="spearman")[2]
   TestStats[b,6] = cor(X0,method="kendall")[2]
 }
-CV = apply(TestStats,2,quantile,prob=0.95)
+CV = apply(TestStats,2,quantile,prob=1-alpha)
 CV = data.frame(t(CV))
 colnames(CV) = c("EL","KS","CvM","AD","spearman","kendall")
+
+
 #########################################################################
 #  Perform simulation using Clayton copula 
 #  with sample size n and B Monte Carlo replications. 
 B = 10000; #number of Monte Carlo replications
 Tau = seq(0,0.4,by=0.1); nTau = length(Tau); 
 Power = array(0,c(6,nTau)); 
-#set.seed(1200) # for n not equals to 200
-set.seed(200) # for n=50
+set.seed(200) 
 for(i in 1:nTau){
   for(b in 1:B){
     if(Tau[i]==0){X = array(runif(2*n),c(n,2)); }
@@ -52,6 +53,7 @@ for(i in 1:nTau){
 }
 colnames(Power) = Tau; rownames(Power) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau")
 Power_Calyton = Power; 
+
 #########################################################################
 #  Perform simulation using Frank copula 
 #  with sample size n and B Monte Carlo replications. 
@@ -125,4 +127,3 @@ print(Power_Calyton,digit=3);
 print(Power_Frank,digit=3);
 print(Power_Gumbel,digit=3);
 print(Power_Gaussian,digit=3);
-
