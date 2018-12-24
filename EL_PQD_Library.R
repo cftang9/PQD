@@ -350,67 +350,7 @@ IndvsPQD = function(X, Y, CV=NULL, alpha=0.05, graph=FALSE){
     rownames(IndvsPQD) = c("EL", "KS", "CvM", "AD", "spearman", "kendall"); 
     return(IndvsPQD)
   }
-  
 }
-
-Vexler2014 = function(x,y){
-  n=length(x); 
-  m <- r <- rep(round(0.5*n^0.8), n); i = 1:n; 
-  #x = runif(n); y = runif(n); 
-  sx = sort(x); sy = sort(y); 
-  yD <- 1*((i-m) < 1) + (i-m)*((i-m) >= 1); 
-  yU <- n*((i+m) > n) + (i+m)*((i+m) <= n); 
-  xt <- x[order(y)]; si <- rank(xt); 
-  xD = 1*((si - r) < 1) + (si - r)*((si - r) >= 1)
-  xU = n*((si + r) > n) + (si + r)*((si + r) <= n)
-  sxxU = sx[xU]; sxxD = sx[xD]; syyU = sy[yU]; syyD = sy[yD]
-  
-  denom <- xU - xD; 
-  denom[denom==0] <- 1/n; 
-  # Write a function for calculating the bivariate empirical function based on (Xi, Yi), i=1,...,n #(without n^(-1))
-  fn <- function(u, v){
-    sum(1*(x< u & y < v) + 0.5*(x == u & y < v) + 0.5*(x < u & y == v) + 0.25*(x == u & y == v))
-  }
-  # Write a function for the calculation of Equation (2) 
-  fnn <- function(s, n){
-    delta <- ( fn(sxxU[s] , syyU[s]) - fn(sxxD[s] , syyU[s]) - fn(sxxU[s] , syyD[s]) + fn(sxxD[s] , syyD[s]) + n^0.55)/denom[s]
-    if (delta==0) delta <- 1/n^2
-    return(delta)
-  }
-  Vexler2014 <- sum(log((n^0.2)*sapply(i, function(s) {fnn(s, n)})))
-  return(Vexler2014)
-}
-
-CV_Vexler2014 = function(n,alpha=0.05){
-  if(alpha==0.2 ){ri=2}
-  if(alpha==0.1 ){ri=3}
-  if(alpha==0.05){ri=4}
-  if(alpha==0.01){ri=5}
-  Table = array(c(
-    5,  3.7592,  3.7982,  4.0709,  4.3405, 
-    7,  5.7211,  5.9138,  6.0390,  6.3010,
-    10,  7.4321,  7.6529,  7.8549,  8.2521,
-    15, 10.8383, 11.1268, 11.3766, 11.8930,
-    17, 11.6964, 11.9860, 12.2427, 12.7964,
-    20, 14.0863, 14.4149, 14.7061, 15.3051,
-    23, 15.6590, 15.9941, 16.2962, 16.9399,
-    25, 16.6106, 16.9430, 17.2632, 17.9485,
-    30, 19.7139, 20.0724, 20.4089, 21.1245,
-    35, 22.7744, 23.1606, 23.5258, 24.2849,
-    40, 25.7939, 26.1989, 26.5672, 27.3895,
-    45, 28.7824, 29.2060, 29.6057, 30.4312,
-    50, 32.1148, 32.5648, 32.9714, 33.8318,
-    60, 37.9011, 38.3995, 38.8356, 39.7367,
-    70, 43.6649, 44.1765, 44.6390, 45.6783,
-    80, 49.4025, 49.9159, 50.3733, 51.3542,
-    90, 55.3020, 55.8526, 56.3487, 57.4026,
-    100, 60.9451, 61.4996, 62.0054, 63.0367
-  ), c(5,18))
-  ni = c(Table[1,]==n); 
-  CV_Vexler2014 = Table[ri,ni]
-  return(CV_Vexler2014)
-}
-
 
 FlipQ = function(X){
   nX = length(X[,1]); 
