@@ -94,6 +94,6 @@ for(i in 1:ndt){
 }
 colnames(PowerCA) = dt; rownames(PowerCA) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau")
 
-print(PowerT,digits=3)
-print(PowerFGM,digits=3)
-print(PowerCA,digits=3)
+print("Restricted Students' t"); print(PowerT,digits=3)
+print("FGM"); print(PowerFGM,digits=3)
+print("CA"); print(PowerCA,digits=3)
