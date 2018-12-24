@@ -52,7 +52,7 @@ for(i in 1:nTau){
   }
 }
 colnames(Power) = Tau; rownames(Power) = c("EL","KS","CvM","AD","spearman_rho","kendall_tau")
-Power_Calyton = Power; 
+Power_Clayton = Power; 
 
 #########################################################################
 #  Perform simulation using Frank copula 
