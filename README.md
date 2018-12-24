@@ -6,7 +6,7 @@ Prior to using R programs on this repository, please download the main R program
 
 ## Part 1:  Illustration
 
-### 1.1  A simple example: 
+### 1.1  A simple example
 
 Below generates a random sample of size 10 from a Clayton copula, with a user-specified Kendall's tau, to test for independence versus positive quadrant dependence (PQD). 
 ```R
@@ -29,7 +29,7 @@ The argument `Copula="Calyton"` in the function `RV_CopTau` above can be changed
 For a quick illustration, we set n=10 above. Other sample sizes can be considered as well. However, When the sample size is large, it will take a longer time to run.
 
 
-### 1.2 For your own data: 
+### 1.2 For your own data
 Please use these R commands after naming the data by X and Y:
 ```R
 source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")
@@ -37,9 +37,9 @@ source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")
 IndvsPQD(X,Y,graph=TRUE)
 ```
 
-## Part 2: To reproduce the simulation results: 
+## Part 2: To reproduce the simulation results
 
-### 2.1 Table 1 in Section 3 of the manuscript: 
+### 2.1 Table 1 in Section 3 of the manuscript 
 To reproduce Table 1, which involves four classic copulas: Clayton, Frank, Gumbel, and Gaussian, please run this R program:
 [Clayton Frank Gumbel and Gaussian n=100.R](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted%20t%20FGM%20and%20CA%20n%3D100.R).
 But be aware of that, because the number of replications is 10,000, this program might take a long time to finish. As stated in our manuscript, our calcuation of Table 1 took approximately 73 minutes on a computer with a 3.1GHz processor and 16GB of memory. 
@@ -48,7 +48,7 @@ Table 1 considers n=100. We also included the same table but with n=50 and 200 i
 and
 [Clayton Frank Gumbel and Gaussian n=200.R](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted%20t%20FGM%20and%20CA%20n%3D200.R), respectively.
 
-### 2.2 Restricted Students' t-distribution, Farlie–Gumbel–Morgenstern (FGM), and Cuadras–Aug ́e (CA) copulas in Web Appendix C of the supplementary file: 
+### 2.2 Restricted Students' t-distribution, Farlie–Gumbel–Morgenstern (FGM), and Cuadras–Aug ́e (CA) copulas in Web Appendix C of the supplementary file
 More copulas were considered in the size and power studies. 
 It can be shown that the Students' t-distribution restricted on the first quadrant and centered at the origin with identity shape matrix satisfies the PQD condition. Further, PQD also holds for some FGM and CA copulas. 
 
@@ -60,22 +60,22 @@ The size and power results with sample sizes
 and
 [Restricted t FGM and CA n=200.R](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted%20t%20FGM%20and%20CA%20n%3D200.R).
 
-## Part 3: To reproduce the real data analysis results in Section 4 of the manuscript:
+## Part 3: To reproduce the real data analysis results in Section 4 of the manuscript
 We applied all tests in this manuscript to three data applications. To reproduce the results of our analysis (Table 2 and Figures 2-4), please run the R program for each. The data included in the csv file will be automatically read by the corresponding R program.
 
 
-### 3.1 Twins Data:  
+### 3.1 Twins Data
 
 Data: [TwinsData.csv](https://raw.githubusercontent.com/cftang9/PQD/master/TwinsData.csv) 
 (R program: [TwinsData.R](https://raw.githubusercontent.com/cftang9/PQD/master/TwinsData.R))
 
-### 3.2 Education data: 
+### 3.2 Education data
 
 Data: [EducationData.csv](https://raw.githubusercontent.com/cftang9/PQD/master/EducationData.csv)
 (R program: [EducationData.R](https://raw.githubusercontent.com/cftang9/PQD/master/EducationData.R))
 
 
-### 3.3 Stock Data: 
+### 3.3 Stock Data
 
 Data: [StockData.csv](https://raw.githubusercontent.com/cftang9/PQD/master/StockData.csv) 
 (R program: [StockData.R](https://raw.githubusercontent.com/cftang9/PQD/master/StockData.R))
