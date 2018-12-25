@@ -81,4 +81,4 @@ Data: [EducationData.csv](https://raw.githubusercontent.com/cftang9/PQD/master/E
 Data: [StockData.csv](https://raw.githubusercontent.com/cftang9/PQD/master/StockData.csv) 
 (R program: [StockData.R](https://raw.githubusercontent.com/cftang9/PQD/master/StockData.R))
 
-*Execute functions in `Rcpp` packages may encounter some technical problems for Windows user, one may use `Rstudio` and follow what it suggested to solve the problem. 
+(*Loading or Executing functions in `Rcpp` packages may encounter some technical problems for Windows users, one may run these codes in `Rstudio` and follow what it suggested to solve the problem. )
