@@ -7,7 +7,7 @@
 library(Rcpp)
 library(copula)
 source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")
-Sys.time()
+
 #########################################################################
 #  Generating critical values for EL, KS, CvM, AD, Spearman, and Kendall
 #  tests for independence versus PQD from uniform (0,1)^2 with sample 
