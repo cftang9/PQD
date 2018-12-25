@@ -2,7 +2,7 @@
 
 This repository contains R programs for the article, “Testing for positive quadrant dependence.” 
 This article has been submitted for publication. 
-Prior to using R programs on this repository, please download the main R program [EL_PQD_Library.R](https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R) or source it in R using the command: ``source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")``.
+Prior to using R programs on this repository, please download the main R program [EL_PQD_Library.R](https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R) or source it in R using the command: ``source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")``, which requires installing `R` packages `Rcpp` and `copula`.
 
 ## Part 1:  Illustration
 
@@ -59,6 +59,7 @@ The size and power results with sample sizes
 [Restricted_t_FGM_and_CA n=100.R](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted_t_FGM_and_CA_n%3D50.R)
 and
 [Restricted_t_FGM_and_CA_n=200.R](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted_t_FGM_and_CA_n%3D200.R).
+Users may need to further install `R` packages `FDGcopulas` and `GFGM.copula` before executing the `R` codes above.
 
 ## Part 3: To reproduce the real data analysis results in Section 4 of the manuscript
 We applied all tests in this manuscript to three data applications. To reproduce the results of our analysis (Table 2 and Figures 2-4), please run the R program for each. The data included in the csv file will be automatically read by the corresponding R program.
