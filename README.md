@@ -15,14 +15,26 @@ source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")
 # Set sample size n, and the Kendall's tau
 n = 10; tau = 0.2
 # Generate a sample of size n
+# For illustration, we set seed at 100
+set.seed(100)
 Sample = RV_CopTau(n, tau, Copula="Clayton")
 # Name the sample by X and Y
 X=Sample[,1];Y=Sample[,2]
 # Run the test
 IndvsPQD(X,Y,graph=TRUE)
 ```
+
 A scatter plot and a plot of the corresponding pseudo-observations between `X` and `Y` will be produced. 
-Our proposed empirical-likelihood-based test (EL) and three distance-based tests (KS, CvM, and AD) for PQD along with the Kendall and Spearman rank tests will be performed. Results include the corresponding test statistics, critical values at significance level 0.05, and p-values.
+Our proposed empirical-likelihood-based test (EL) and three distance-based tests (KS, CvM, and AD) for PQD along with the Kendall and Spearman rank tests will be performed. Results include the value of each test statistic, the corresponding p-value, reject indepedence (1) or not (0), and the critical value at significance level 0.05:
+```
+         test statistic p-value reject independence critical value
+EL           0.39887816  0.5200                   0      1.4329523
+KS           0.31884122  0.8956                   0      0.6664304
+CvM          0.03267605  0.8528                   0      0.1961564
+AD           1.98834920  0.7074                   0      7.8084519
+spearman    -0.17575758  0.6902                   0      0.5515152
+kendall     -0.20000000  0.7611                   0      0.4222222
+```
 
 The argument `Copula="Calyton"` in the function `RV_CopTau` above can be changed to `Copula="Frank"` and `Copula="Gumbel"` to generate a random sample from the Frank and Gumbel copulas, respectively. The gaussian copula can be considered, too. See these details in [IllustrativeExamples.R](https://raw.githubusercontent.com/cftang9/PQD/master/IllustrativeExamples.R).
 
