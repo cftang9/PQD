@@ -25,6 +25,8 @@ IndvsPQD(X,Y,graph=TRUE)
 ```
 
 A scatter plot and a plot of the corresponding pseudo-observations between `X` and `Y` will be produced. 
+![Optional Text](../master/Example.png)
+
 Our proposed empirical-likelihood-based test (EL) and three distance-based tests (KS, CvM, and AD) for PQD along with the Kendall and Spearman rank tests will be performed. Results include the value of each test statistic, the corresponding p-value, reject indepedence (1) or not (0), and the critical value at significance level 0.05:
 ```
          test statistic p-value reject independence critical value
