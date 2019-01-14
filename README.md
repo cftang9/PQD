@@ -2,7 +2,7 @@
 
 This repository contains R programs for the article, “Testing for positive quadrant dependence.” 
 This article has been submitted for publication. 
-Prior to using R programs on this repository, please download the main R program [EL_PQD_Library.R](https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R) or source it in R using the command: ``source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")``, which requires installing `R` packages `Rcpp` and `copula`.
+Prior to using R programs on this repository, please download the main R program [EL_PQD_Library.R](https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R) or source it in R using the command: ``source("https://raw.githubusercontent.com/cftang9/PQD/master/EL_PQD_Library.R")``, which requires installing `R` packages `Rcpp` and `copula`. This R program will automate critical value calcuations for practitioner. To better understand the use of our R program, we start with an illustrative example.
 
 ## Part 1:  Illustration
 
