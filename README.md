@@ -65,7 +65,7 @@ Table 1 considers n=100. We also included the same table but with n=50 and 200 i
 and
 [Clayton_Frank_Gumbel_and_Gaussian_n=200.R](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted_t_FGM_and_CA_n%3D200.R), respectively.
 
-### 2.3 Tables C.3, C.4, and C.5 in Web Appendix C
+### 2.3 Tables C.3-C.5 in Web Appendix C
 
 In addition to the Clayton, Frank, Gaussian, and Gumbel copulas, we have also considered the FGM and CA copulas and a restricted bivariate t distribution family. The results are presented in Tables C.3-C.5 in Web Appendix C. To reproduce these tables, please run
 [Restricted_t_FGM_and_CA n=50.R](https://raw.githubusercontent.com/cftang9/PQD/master/Restricted_t_FGM_and_CA_n%3D100.R),
